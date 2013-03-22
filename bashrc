@@ -1,4 +1,3 @@
-
 export CLICOLOR=1
 
 C_RED="\[\033[31m\]"
@@ -24,8 +23,10 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
  
-export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w\n$C_DARKGRAY\$$C_DEFAULT "
+export PS1="\n$C_DARKGRAY$(date +%R)\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w\n$C_DARKGRAY\$$C_LIGHTGRAY "
 export PS2="> "
+
+export HISTCONTROL=ignoredups
 
 # Aliases
 alias ..='cd ..'
@@ -35,3 +36,14 @@ alias x='exit'
 alias ls='ls -Fa'
 alias mv='mv -i'
 alias cp='cp -i'
+
+# Add bash aliases.
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
+
+# Functions
+function md {
+    mkdir -p -v $1
+    cd $1
+}
