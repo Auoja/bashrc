@@ -1,4 +1,3 @@
-echo Welcome
 
 export CLICOLOR=1
 
@@ -25,7 +24,7 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
  
-export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_RED\w\n$C_DARKGRAY\$$C_DEFAULT "
+export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w\n$C_DARKGRAY\$$C_DEFAULT "
 export PS2="> "
 
 # Aliases
